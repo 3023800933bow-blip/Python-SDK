@@ -3,23 +3,23 @@ clc;clear;close all;
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % load Tn_ROImean_1 Tn_ROImean_1;
 % Tn_ROImean = Tn_ROImean_1;
-% Fs = 50;           % 采样频率 (Hz)
+% Fs = 50;           % 閲囨牱棰戠巼 (Hz)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % load Tn_ROImean_2 Tn_ROImean_2;
 % Tn_ROImean = Tn_ROImean_2;
-% Fs = 33;           % 采样频率 (Hz)
+% Fs = 33;           % 閲囨牱棰戠巼 (Hz)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % load Tn_ROImean_3 Tn_ROImean_3;
 % Tn_ROImean = Tn_ROImean_3;
-% Fs = 33;           % 采样频率 (Hz)
+% Fs = 33;           % 閲囨牱棰戠巼 (Hz)
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 load Tn_ROImean_4 Tn_ROImean_4;
 Tn_ROImean = Tn_ROImean_4;
 % Tn_ROImean = Tn_ROImean_4(500:1500,:);
-Fs = 30;           % 采样频率 (Hz)
+Fs = 30;           % 閲囨牱棰戠巼 (Hz)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -32,10 +32,10 @@ TnBpass_real = zeros(size(TnAll));
 Fabs = zeros(size(TnAll));
 
 
-% 设计参数
-Wp = [0.1 4];      % 通带频率范围 (Hz)，归一化到[0, Fs/2]
+% 璁捐鍙傛暟
+Wp = [0.1 4];      % 閫氬甫棰戠巼鑼冨洿 (Hz)锛屽綊涓�鍖栧埌[0, Fs/2]
 sigma = 0.00001;
-fnum = size(TnAll,1); % 采样帧数
+fnum = size(TnAll,1); % 閲囨牱甯ф暟
 
 [FILTER,x_f] = func_filter_ideal(Fs,Wp,fnum);
 
